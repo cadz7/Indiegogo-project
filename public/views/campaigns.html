@@ -1,0 +1,28 @@
+<div class="container padding-top">
+        <div class="panel-heading center">
+            <h3>Campaign List</h3>
+            <br>
+            <div class="center">
+                <input class="filter-box" type="text" ng-model="query.title" placeholder="Search...">
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row show-list">
+                <div class="col-xs-4 col-md-3 card-container" ng-repeat="campaign in campaignList | filter:query">
+                        <div ng-click="openLink(campaign.slug)" style="cursor: pointer">
+                            <img class="image-size" ng-src="{{campaign.baseball_card_image_url}}" width="100%"/>
+                            <div class="text-center" />
+                            <div class="card-inner-container">
+                                <p>{{campaign.title}}</p>
+                            </div>
+                            <div class="tagline-container">
+                                <p class="text-muted tagline">{{campaign.tagline}}</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div ng-show="campaignList.length == 0" class="center">
+                <h3>No campaigns!</h3>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="IndiegogoApp">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IndiegogoApp</title>
+
+  <!-- Indiegogo Favicon -->
+	<link href="https://g0.iggcdn.com/assets/favicon/favicon-32-0f9aeeb53db5c05c25bf147307b8a645.png" rel="icon" sizes="32x32" type="image/png" />
+	<link href="https://g1.iggcdn.com/assets/favicon/favicon-48-12afd0627a5bad90511bf38e610b59ff.png" rel="icon" sizes="48x48" type="image/png" />
+	<link href="https://g2.iggcdn.com/assets/favicon/favicon-64-576ba72ca961be940512874017de67c1.png" rel="icon" sizes="64x64" type="image/png" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">	
+  	<link href="stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<nav id="nav">
+		<ul class="container">	
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="campaigns">Explore Campaigns</a></li>
+			<li><a ui-sref="documentation">Documentation</a></li>
+		</ul>
+	</nav>
+
+
+<div ui-view class="full-height"></div>
+
+<script src="vendor/angular.js"></script>
+<script src="vendor/angular-strap.js"></script>
+<script src="vendor/angular-strap.tpl.js"></script>
+<script src="vendor/angular-messages.js"></script>
+<script src="vendor/angular-resource.js"></script>
+<script src="vendor/moment.min.js"></script>
+<script src="vendor/angular-animate.js"></script>
+<script src="vendor/angular-ui-router.min.js"></script>
+
+<script src="app.js"></script>
+
+<script src="javascripts/services/campaign-service.js"></script>
+
+<script src="javascripts/controllers/home-ctrl.js"></script>
+<script src="javascripts/controllers/campaign-ctrl.js"></script>
+<script src="javascripts/controllers/campaign-detail-ctrl.js"></script>
+<script src="javascripts/controllers/documentation-ctrl.js"></script>
+
+</body>
+</html>
